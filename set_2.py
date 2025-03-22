@@ -66,3 +66,6 @@ def scytale_decipher(message, shift):
         output += message[og_position]
     
     return output
+
+
+# sites used to help understand ord and chr: https://stackoverflow.com/questions/36367883/shift-n-letters-in-python & https://algo.monster/liteproblems/848
