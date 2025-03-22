@@ -1,6 +1,6 @@
 # no 1
 def savings(gross_pay, tax_rate, expenses):
-	takehome_pay = int(gross_pay * tax_rate) - expenses
+	takehome_pay = int(gross_pay * (1 - tax_rate)) - expenses
 	
 	return takehome_pay
 
