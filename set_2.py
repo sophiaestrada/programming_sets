@@ -38,7 +38,7 @@ def vigenere_cipher(message, key):
             shift = ord(key[index]) - ord("A")
             new_letter = chr((ord(letter) - ord("A") + shift) % 26 + ord("A"))
             output += new_letter
-            index = (index + 1) % len(key)  
+        index = (index + 1) % len(key)  
 
     return output
 
