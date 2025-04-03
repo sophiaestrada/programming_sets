@@ -27,6 +27,8 @@ def tic_tac_toe(board):
           return column[0]
 
   diag1 = []
+  diag2 = []
+  
   for i in range(len(board)):
       diag1.append(board[i][i])
 
@@ -34,7 +36,6 @@ def tic_tac_toe(board):
   if len(symbol) == 1 and diag1[0] != "":
       return diag1[0]
 
-  diag2 = []
   for i in range(len(board)):
       diag2.append(board[i][len(board) - 1 - i])
 
@@ -47,15 +48,15 @@ def tic_tac_toe(board):
 
 # no 3
 def eta(first_stop, second_stop, route_map):
-    current_stop = first_stop
-    total_time = 0
+  total_time = 0
+  current_stop = first_stop
 
-    while current_stop != second_stop:
-        for leg in route_map:
-            start, end = leg
-            if start == current_stop:
-                total_time += route_map[leg]["travel_time_mins"]
-                current_stop = end
-                break
+  while current_stop != second_stop:
+      for leg in route_map:
+          start, end = leg
+          if start == current_stop:
+              total_time += route_map[leg]["travel_time_mins"]
+              current_stop = end
+              break
 
-    return total_time
+  return total_time
