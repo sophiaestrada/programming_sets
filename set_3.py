@@ -13,8 +13,8 @@ def relationship_status(from_member, to_member, social_graph):
 # no 2
 def tic_tac_toe(board):
   for row in board:
-      symbol = set(row)
-      if len(symbol) == 1 and row[0] != "":
+      row_symbols = set(row)
+      if len(row_symbols) == 1 and row[0] != "":
           return row[0]
 
   for col in range(len(board)):
